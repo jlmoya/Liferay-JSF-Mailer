@@ -1,4 +1,4 @@
-#Liferay-JSF-Mailer
+# Liferay-JSF-Mailer
 -------------------
 
 Liferay-JSF-Mailer is an example on how to send mail using a
@@ -13,7 +13,7 @@ With maven, build with "clean verify install" goals, then deploy to Liferay.
 Installation
 ------------
 
-###Liferay Mail Configuration (Configuration is for a GMail account) adjust as required.
+### Liferay Mail Configuration (Configuration is for a GMail account) adjust as required.
 
 Go to Admin->Control Panel->Server Administration->Mail
 
@@ -30,7 +30,7 @@ Again, fill in your user name and password.
 
 Press "Save" button.
 
-###Eclipse Configuration
+### Eclipse Configuration
 
 Use "Add and Remove" to add to Liferay Server if running in Eclipse the 
 Liferay-JSF-Mailer project.  Otherwise deploy as usual by making the 

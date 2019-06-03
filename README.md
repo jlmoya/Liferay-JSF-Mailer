@@ -2,7 +2,7 @@
 -------------------
 
 Liferay-JSF-Mailer is an example on how to send mail using a
-Jave Server Faces Portlet with Liferay 7.1.3 GA4.  It uses Maven
+Java Server Faces Portlet with Liferay 7.1.3 GA4.  It uses Maven
 to compile the war file.
 
 Usage

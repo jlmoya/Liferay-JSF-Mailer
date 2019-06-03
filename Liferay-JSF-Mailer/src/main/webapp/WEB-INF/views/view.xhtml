@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head>
+		<h:outputStylesheet library="css" name="main.css" />
+	</h:head>
+	<h:body>
+		<p:panel id="panelId">
+			<h:outputText styleClass="bold-hello-world" value="#{i18n['Mailer-hello-world']}" />
+		</p:panel>
+		<ul>
+			<h1><h:outputText value="Product Versions"/></h1>
+			<li><em><h:outputText value="#{product.JSF}" /></em></li>
+			<li><em><h:outputText value="#{product.LIFERAY_FACES_BRIDGE}" /></em></li>
+			<li><em><h:outputText value="#{product.LIFERAY_FACES_BRIDGE_EXT}" /></em></li>
+			<li><em><h:outputText value="#{product.LIFERAY_FACES_UTIL}" /></em></li>
+			<li><em><h:outputText value="#{product.PRIMEFACES}" /></em></li>
+		</ul>
+		<h:form>
+			<h:messages globalOnly="true" />
+			<h:outputLabel value="#{i18n['From: ']}" /><h:inputText value="#{mailHelper.from}" /><br/><br/>
+			<h:outputLabel value="#{i18n['To: ']}" /><h:inputText value="#{mailHelper.to}" /><br/><br/>
+			<h:outputLabel value="#{i18n['Subject: ']}" /><h:inputText value="#{mailHelper.subject}" /><br/><br/>
+			<h:outputLabel value="#{i18n['Body: ']}" /><h:inputTextarea value="#{mailHelper.body}" /><br/><br/>
+			<h:outputLabel value="#{i18n['Html Format: ']}" /><h:selectBooleanCheckbox value="#{mailHelper.htmlFormat}" /><br/><br/>
+			<h:commandButton actionListener="#{mailHelper.submit}" value="#{i18n['submit']}">
+				<f:ajax execute="@form" render="@form" />
+			</h:commandButton>
+			<br /><br/>
+			<h2>Here is the E-mail: #{mailHelper.from}</h2>
+		</h:form>
+	</h:body>
+</f:view>

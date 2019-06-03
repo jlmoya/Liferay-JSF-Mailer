@@ -19,13 +19,19 @@ Go to Admin->Control Panel->Server Administration->Mail
 
 Fill in the form as follows:
 Incoming POP Server: pop.gmail.com
+
 Incoming port: 995
+
 Check "Use a secure network configuration"
+
 Fill in your user name and password.
 
 Outgoing SMTP Server: smtp.gmail.com
+
 Outgoing port: 465
+
 Check "Use a secure network configuration"
+
 Again, fill in your user name and password.
 
 Press "Save" button.

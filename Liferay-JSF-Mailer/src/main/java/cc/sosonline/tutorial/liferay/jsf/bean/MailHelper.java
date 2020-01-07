@@ -11,7 +11,8 @@ import javax.faces.event.ActionEvent;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
@@ -30,7 +31,7 @@ import cc.sosonline.tutorial.liferay.jsf.service.MailServiceTracker;
 @RequestScoped
 public class MailHelper {
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(MailHelper.class);
+	private static Logger log = LogManager.getLogger(MailHelper.class);
 
 	private MailServiceTracker mailServiceTracker;
 	private MailMessage mailMessage;
